@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #af67e9, #6565e7);
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75rem;
+  margin: 8rem 1.3rem 7rem;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-card {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(238deg, 29%, 16%);
+  padding: 2rem 1.7rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 26.5625rem;
+  position: relative;
+  -webkit-animation: fadeIn 1s ease-in-out;
+          animation: fadeIn 1s ease-in-out;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 64em) and (max-width: 90em) {
+  .faq-card {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    max-width: 57.4rem;
+    position: relative;
+    z-index: -1;
+  }
+}
+.faq-card__desktop-img, .faq-card__desktop-box, .faq-card__desktop-woman {
+  display: none;
+}
+@media only screen and (min-width: 64em) and (max-width: 90em) {
+  .faq-card__desktop-img, .faq-card__desktop-box, .faq-card__desktop-woman {
+    display: block;
+  }
+}
+.faq-card__desktop-img {
+  height: 51rem;
+  width: 49.4rem;
+  left: -26.4rem;
+  bottom: 2.3rem;
+  position: relative;
+}
+.faq-card__desktop-box {
+  height: 11.5rem;
+  z-index: 2;
+  position: absolute;
+  left: 7.6rem;
+  bottom: 8.59rem;
+}
+.faq-card__desktop-woman {
+  height: 22.3rem;
+  z-index: 1;
+  left: -5rem;
+  top: 6rem;
+  position: absolute;
+}
+.faq-card__image {
+  height: 11.2rem;
+  z-index: 2;
+  position: absolute;
+  top: -6.7rem;
+}
+@media only screen and (min-width: 64em) and (max-width: 90em) {
+  .faq-card__image {
+    display: none;
+  }
+}
+.faq-card__wrapper {
+  text-align: left;
+}
+.faq-card__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #191919;
+  text-align: center;
+  align-self: center;
+}
+.faq-card__container {
+  border-bottom: solid 2.5px hsl(0deg, 0%, 91%);
+  width: 100%;
+  margin-bottom: 1.3rem;
+}
+.faq-card__container svg {
+  transition: transform 0.5s ease-in-out;
+}
+.faq-card__container.active .faq-card__question h2 {
+  color: #191919;
+  font-weight: 700;
+}
+.faq-card__container.active .faq-card__answer {
+  max-height: 200px;
+  padding-bottom: 12px;
+  -webkit-animation: fade 0.7s ease-in-out;
+          animation: fade 0.7s ease-in-out;
+}
+.faq-card__container.active svg {
+  transform: rotate(180deg);
+}
+.faq-card__question {
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4375rem;
+  padding-bottom: 10px;
+}
+.faq-card__question h2 {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  transition: font-weight 0.1s ease-in;
+}
+.faq-card .image {
+  transform: translateY(-2rem);
+  z-index: 1;
+}
+@media only screen and (min-width: 64em) and (max-width: 90em) {
+  .faq-card .image {
+    display: none;
+  }
+}
+.faq-card__question:hover, .faq-card__question:focus-visible {
+  color: hsl(14deg, 88%, 65%);
+}
+.faq-card__answer {
+  font-size: 0.7219rem;
+  text-align: left;
+  padding-right: 1.5rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.attribution {
+  color: #fff;
+  text-align: center;
+  padding: 5% 7%;
+}
+.attribution a {
+  color: #191919;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "Oregano", sans-serif;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=styles.css.map */

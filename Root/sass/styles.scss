@@ -1,0 +1,189 @@
+$text: ( v-darkblue: hsl(238, 29%, 16%), soft-red: hsl(14, 88%, 65%), );
+$gradient: ( soft-violet: hsl(273, 75%, 66%), soft-blue: hsl(240, 73%, 65%), );
+$neutral: ( v-darkGrayBlue: hsl(237, 12%, 33%), darkGrayBlue: hsl(240, 6%, 50%), lightGrayBlue: hsl(240, 5%, 91%), white: hsl(0, 0%, 100%), divider: hsl(0, 0%, 91%), );
+@mixin mobileFirst($mediaOne, $mediaTwo) {
+    @media only screen and (min-width: calc($mediaOne/16)+em) and (max-width: calc($mediaTwo/16)+em) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #af67e9, #6565e7);
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 0.75rem;
+    margin: 8rem 1.3rem 7rem;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-card {
+    background-color: map-get($neutral, white);
+    color: map-get($text, v-darkblue);
+    padding: 2rem 1.7rem;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 26.5625rem;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 10px;
+    @include mobileFirst(1024, 1440) {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        max-width: 57.4rem;
+        position: relative;
+        z-index: -1;
+    }
+    &__desktop-img,
+    &__desktop-box,
+    &__desktop-woman {
+        display: none;
+        @include mobileFirst(1024, 1440 ){
+        display: block;
+        }
+    }
+
+    &__desktop-img{
+        height: 51rem;
+        width: 49.4rem;
+        left: -26.4rem;
+        bottom: 2.3rem;
+        position: relative;
+    }
+
+    &__desktop-box{
+        height: 11.5rem;
+        z-index: 2;
+        position: absolute;
+        left: 7.6rem;
+        bottom: 8.59rem;
+    }
+
+    &__desktop-woman{
+        height: 22.3rem;
+        z-index: 1;
+        left: -5rem;
+        top: 6rem;
+        position: absolute;
+    }
+
+    &__image {
+        height: 11.2rem;
+        z-index: 2;
+        position: absolute;
+        top: -6.7rem;
+        @include mobileFirst(1024, 1440) {
+            display: none;
+        }
+    }
+
+    &__wrapper{
+        text-align: left;
+    }
+    &__heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #191919;
+        text-align: center;
+        align-self: center;
+    }
+    &__container {
+        border-bottom: solid 2.5px map-get($neutral, divider);
+        width: 100%;
+        margin-bottom: 1.3rem;
+        svg {
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+    &__container.active &__question h2 {
+        color: #191919;
+        font-weight: 700;
+    }
+    &__container.active &__answer {
+        max-height: 200px;
+        padding-bottom: 12px;
+        animation: fade 0.7s ease-in-out;
+    }
+    &__container.active svg {
+        transform: rotate(180deg);
+    }
+    &__question {
+        font-weight: 400;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.4375rem;
+        padding-bottom: 10px;
+    }
+    &__question h2 {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        transition: font-weight 0.1s ease-in;
+    }
+    .image {
+        transform: translateY(-2rem);
+        z-index: 1;
+        @include mobileFirst(1024, 1440) {
+            display: none;
+        }
+    }
+    &__question:hover,
+    &__question:focus-visible {
+        color: map-get($text, soft-red);
+    }
+    &__answer {
+        font-size: 0.7219rem;
+        text-align: left;
+        padding-right: 1.5rem;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+    }
+}
+
+.attribution {
+    color: #fff;
+    text-align: center;
+    padding: 5% 7%;
+    a {
+        color: #191919;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 700;
+        font-family: "Oregano", sans-serif;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateX(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

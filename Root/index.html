@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./sass/normalize.css" />
+    <link rel="stylesheet" href="./sass/styles.css" />
+    <link href="http://fonts.cdnfonts.com/css/kumbh-sans" rel="stylesheet" />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+
+  <body>
+    <img
+      src="./assets/images/illustration-box-desktop.svg"
+      class="faq-card__desktop-box"
+      alt=""
+    />
+    <main class="faq-card">
+      <!-- Mobile Image -->
+      <img
+        src="./assets/images/illustration-woman-online-mobile.svg"
+        alt=""
+        class="faq-card__image"
+      />
+
+      <svg
+        width="240"
+        height="104"
+        class="image"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M116.454 102.048L4.667 34.239c-3.56-2.054-6.61-5.42-3.142-7.627l112.184-66.364c1.682-1.07 4.237-1.773 5.951-.75l117.328 69.904c3.559 2.12 4.198 8.028.652 10.17L131.185 101.94a14.53 14.53 0 01-14.731.107z"
+          fill="#6862E6"
+          fill-rule="nonzero"
+          opacity=".099"
+        />
+      </svg>
+
+      <!-- Desktop Image -->
+      <img
+        src="./assets/images/bg-pattern-desktop.svg"
+        class="faq-card__desktop-img"
+        alt=""
+      />
+      <img
+        src="./assets/images/illustration-woman-online-desktop.svg"
+        class="faq-card__desktop-woman"
+        alt=""
+      />
+
+      <!-- Content -->
+      <div class="faq-card__wrapper">
+        <h1 class="faq-card__heading">FAQ</h1>
+
+        <div class="faq-card__container">
+          <div class="faq-card__question">
+            <h2>How many team members can I invite?</h2>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+              height="15"
+              width="9"
+            >
+              <path
+                d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
+                fill="hsl(14deg, 88%, 65%)"
+                stroke-width="7"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div class="faq-card__answer faq-card--hide">
+            <p>
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-card__container">
+          <div class="faq-card__question">
+            <h2>What is the maximum file upload size?</h2>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+              height="15"
+              width="9"
+            >
+              <path
+                d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
+                fill="hsl(14deg, 88%, 65%)"
+                stroke-width="7"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div class="faq-card__answer">
+            <p>
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-card__container">
+          <div class="faq-card__question">
+            <h2>How do I reset my password?</h2>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+              height="15"
+              width="9"
+            >
+              <path
+                d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
+                fill="hsl(14deg, 88%, 65%)"
+                stroke-width="7"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div class="faq-card__answer faq-card--hide">
+            <p>
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-card__container">
+          <div class="faq-card__question">
+            <h2>Can I cancel my subscription?</h2>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+              height="15"
+              width="9"
+            >
+              <path
+                d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
+                fill="hsl(14deg, 88%, 65%)"
+                stroke-width="7"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div class="faq-card__answer faq-card--hide">
+            <p>
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-card__container">
+          <div class="faq-card__question">
+            <h2>Do you provide additional support?</h2>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+              height="15"
+              width="9"
+            >
+              <path
+                d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
+                fill="hsl(14deg, 88%, 65%)"
+                stroke-width="7"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <p class="faq-card__answer faq-card--hide">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/didyouseekyng"
+        target="_blank"
+        >Agu Kingsley</a
+      >.
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
